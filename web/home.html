@@ -13,51 +13,53 @@
         <div class="flex-col">
             <!--Contains the nav menu-->
             <header>
-                <img class="logo" src="img/bottle.png" alt="Logo">
+                <img class="img-small" src="img/bottle-tilted.png" alt="Logo">
                 <nav>
                     <ul class="nav-links">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Find Wine</a></li>
-                        <li><a href="#">Add Wine</a></li>
+                        <li class="nav-active"><a>Home</a></li>
+                        <li onclick="location.href = 'find_wine.html';"><a>Find Wine</a></li>
+                        <li onclick="location.href = 'add_wine.html';"><a>Add Wine</a></li>
                     </ul>
                 </nav>
             </header>
-            <!--Contains Wine Of The Day-->
-            <div class="flex-col">
-                <h1>Wine Of The Day</h1>
-                <div class="flex-row">
-                    <img src="img/bottle.png" alt="I'm A Wine Bottle">
-                    <div class="flex-col">
-                        <div class="flex-row">
-                            <h1>Name</h1>
-                            <h1>Year</h1>
-                        </div>
-                        <div class="flex-row">
-                            <h2>Awards</h2>
-                            <h2>Ratings</h2>
+            <div class="main-content">
+                <!--Contains Wine Of The Day-->
+                <div class="flex-col">
+                    <h1 class="heading">Wine Of The Day</h1>
+                    <div class="flex-row">
+                        <img class="img-large" src="img/bottle-tilted.png" alt="I'm A Wine Bottle">
+                        <div class="flex-col">
+                            <div class="flex-row">
+                                <h1>Name</h1>
+                                <h1>Year</h1>
+                            </div>
+                            <div class="flex-row">
+                                <h2>Awards</h2>
+                                <h2>Ratings</h2>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <!--Contains My Cellar-->
-            <div class="flex-col">
-                <h1>My Cellar</h1>
-                <!--Container for all the images and dynamic maps-->
+                <!--Contains My Cellar-->
                 <div class="flex-col">
-                    <div class="flex-row">
-                        <div>
-                            <h1>Pie Chart</h1>
+                    <h1>My Cellar</h1>
+                    <!--Container for all the images and dynamic maps-->
+                    <div class="flex-col">
+                        <div class="flex-row">
+                            <div>
+                                <h1>Pie Chart</h1>
+                            </div>
+                            <div>
+                                <h1>World Map</h1>
+                            </div>
                         </div>
-                        <div>
-                            <h1>World Map</h1>
-                        </div>
-                    </div>
-                    <div class="flex-row">
-                        <div>
-                            <h1>Avg. Rating</h1>
-                        </div>
-                        <div>
-                            <h1>Consumption</h1>
+                        <div class="flex-row">
+                            <div>
+                                <h1>Avg. Rating</h1>
+                            </div>
+                            <div>
+                                <h1>Consumption</h1>
+                            </div>
                         </div>
                     </div>
                 </div>
