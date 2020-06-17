@@ -140,6 +140,11 @@ body {
     flex-wrap: nowrap;
 }
 
+.align-right {
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+}
+
 .align-justified {
     justify-content: space-between;
     flex-wrap: nowrap;
