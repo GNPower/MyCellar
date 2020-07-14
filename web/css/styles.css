@@ -192,3 +192,17 @@ nav a {
 .main-content {
     background-color: sienna !important;
 }
+
+button {
+    width: 5%;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    box-sizing: border-box;
+    box-shadow: 1px 3px rgba(0.9, 0.9, 0.9, 0.9);
+    background: #8d2fa5;
+}
+
+button:hover {
+    cursor: pointer;
+}
