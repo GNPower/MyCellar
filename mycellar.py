@@ -38,11 +38,14 @@ c.executemany(""" --begin-sql
 conn.commit()
 
 c.execute(""" --begin-sql
-    SELECT * FROM customers;
+    SELECT * FROM customers WHERE last_name = 'Clinton';
 """)
 
 #fetchall returns a python object
-print(c.fetchall())
+items = c.fetchall()
+
+for item in items:
+    print(item)
 
 conn.commit()
 
