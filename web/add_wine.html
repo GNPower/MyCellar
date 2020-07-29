@@ -22,11 +22,11 @@
                     </ul>
                 </nav>
             </header>
+            <!--Contains the wine results-->
             <div class="main-content padding-width padding-height">
-                <!--Contains the wine results-->
                 <div class="flex-row">
                     <img src="img/bottle-tilted.png" alt="I'm A Wine Bottle">
-                    <h2>xxx Simillar Wines</h2>
+                    <h2>xxx Results</h2>
                 </div>
                 <!--Contains the filter fields-->
                 <div class="flex-col">
@@ -34,7 +34,7 @@
                     <div class="flex-col padding-width padding-height">
                         <div class="flex-row">
                             <h3>Name:</h3>
-                            <input type="text" placeholder="Enter Name Here">
+                            <input type="text" placeholder="Enter Name Here" id="name">                            
                         </div>
                         <div class="flex-row">
                             <h3>Type:</h3>
@@ -50,27 +50,14 @@
                         <h2>Qualities:</h2>
                         <div class="flex-row padding-width padding-height">
                             <h2 class="padding-width">Grapes: </h2>
-                            <div class="flex-col">
-                                <!-- Example of what will be inserted when add button is pressed for wine-->
-                                <div class="flex-row">
-                                    <h3>Grape Here</h3>
-                                    <div class="padding-width">
-                                        <input type="reset">
-                                    </div>                                    
-                                </div>
-                                <div class="flex-row">
-                                    <h3>And Here</h3>
-                                    <div class="padding-width">
-                                        <input type="reset">
-                                    </div>
-                                </div>
+                            <div class="flex-col">                            
                                 <!---->
-                                <div class="flex-row">
+                                <div class="flex-row" id="new-grape">
                                     <div>
-                                        <input type="text" placeholder="Enter Grape Here">
+                                        <input type="text" placeholder="Enter Grape Here" id="grape-type">
                                     </div>
                                     <div>
-                                        <input type="submit">
+                                        <input type="submit" id="add-grape">
                                     </div>
                                 </div>
                             </div>
@@ -78,7 +65,7 @@
                         <div class="flex-row padding-width padding-height">
                             <h2 class="padding-width">Year: </h2>
                             <div>
-                                <input type="number" min="1900" max="2050">
+                                <input type="number" min="1900" max="2050" id="year">
                             </div>
                         </div>                    
                     </div>
@@ -86,20 +73,13 @@
                     <div class="flex-row padding-width padding-height border-round">
                         <h2>Awards:</h2>
                         <div class="flex-col padding-width">
-                            <!-- Example of what will be inserted when add button is pressed for wine-->
-                            <div class="flex-row">
-                                <h2>Awards Here</h2>
-                                <div class="padding-width">
-                                    <input type="reset">
-                                </div>
-                            </div>
                             <!---->
-                            <div class="flex-row">
+                            <div class="flex-row" id="new-award">
                                 <div>
-                                    <input type="text" placeholder="Enter Award Here">
+                                    <input type="text" placeholder="Enter Award Here" id="award-type">
                                 </div>
                                 <div>
-                                    <input type="submit">
+                                    <input type="submit" id="add-award">
                                 </div>
                             </div>
                         </div>
@@ -109,13 +89,13 @@
                         <h3>Rating:</h3>
                         <div class="flex-row padding-width">
                             <div>
-                                <input type="number" placeholder="Rating" min="0" max="100">
+                                <input type="number" placeholder="Rating" min="0" max="100" id="rating">
                             </div>
                             <h2>out of</h2>
                             <div>
-                                <input type="number" placeholder="Max" min="0" max="100">
+                                <input type="number" placeholder="Max" min="0" max="100" id="rating_max">
                             </div>
-                        </div>                        
+                        </div>
                     </div>
                     <!--Contains geography field-->
                     <div class="flex-col padding-width padding-height border-round">
@@ -124,19 +104,19 @@
                             <div class="flex-row padding-width padding-height">
                                 <h3>Country:</h3>
                                 <div>
-                                    <input type="text" placeholder="Country Here">
+                                    <input type="text" placeholder="Counter Here" id="country">
                                 </div>
                             </div>
                             <div class="flex-row padding-width padding-height">
-                                <h3>Region:</h3>
+                                <h3>Region: </h3>
                                 <div>
-                                    <input type="text" placeholder="Region Here">
+                                    <input type="text" placeholder="Region Here" id="region">
                                 </div>
                             </div>
                             <div class="flex-row padding-width padding-height">
                                 <h3>Vineyard: </h3>
                                 <div>
-                                    <input type="text" placeholder="Vineyard Here">
+                                    <input type="text" placeholder="Vineyard Here" id="vineyard">
                                 </div>
                             </div>
                         </div>
@@ -144,18 +124,18 @@
                     <!--Contains purchase field-->
                     <div class="flex-col padding-width padding-height border-round">
                         <h3>Purchase:</h3>
-                        <div class="padding-width padding-height">                            
+                        <div class="padding-width padding-height">
                             <div class="flex-row padding-height">
                                 <h3>Price: </h3>
-                                <input type="number" placeholder="Price" min="0" max="500">
+                                <input type="number" placeholder="Price" min="0" max="500" id="price">
                             </div>
                             <div class="flex-row padding-height">
                                 <h3>Date: </h3>
-                                <input type="date">
+                                <input type="date" id="buy_date">
                             </div>
                             <div class="flex-row padding-height">
                                 <h3>Location: </h3>
-                                <input type="text" placeholder="Store Location">
+                                <input type="text" placeholder="Store Location" id="buy_location">
                             </div>
                         </div>
                     </div>
@@ -166,35 +146,28 @@
                             <div class="flex-row">
                                 <h3>Drink By:</h3>
                                 <div>
-                                    <input type="date">
+                                    <input type="date" id="drink_by">
                                 </div>
                             </div>
                             <div class="flex-row">
                                 <h3>Drink For: </h3>
                                 <div>
-                                    <input type="text" placeholder="Enter Occasion Here">
+                                    <input type="text" placeholder="Enter Occasion Here" id="drink_for">
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!--Contains pairings field-->
                     <div class="flex-row padding-width padding-height border-round">
-                        <h2>Pairings:</h2>
+                        <h3>Pairings: </h3>
                         <div class="flex-col padding-width">
-                            <!-- Example of what will be inserted when add button is pressed for wine-->
-                            <div class="flex-row">
-                                <h2>Pairing Here</h2>
-                                <div class="padding-width">
-                                    <input type="reset">
-                                </div>
-                            </div>
                             <!---->
-                            <div class="flex-row">
+                            <div class="flex-row" id="new-pairing">
                                 <div>
-                                    <input type="text" placeholder="Enter Pairing Here">
+                                    <input type="text" placeholder="Enter Pairing Here" id="pairing-type">
                                 </div>
                                 <div>
-                                    <input type="submit">
+                                    <input type="submit" id="add-pairing">
                                 </div>
                             </div>
                         </div>
@@ -202,7 +175,7 @@
                 </div>
                 <!--Contains the FindMe button-->
                 <div class="flex-row align-right padding-width padding-height">
-                    <button>Add Me</button>
+                    <button id="find_me" type="submit">Find Me</button>
                 </div>
             </div>
         </div>

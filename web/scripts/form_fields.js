@@ -72,7 +72,7 @@ $(function (){
 });
 
 function updateButtons() {
-    $(':button, input[type="reset"]').click(function(){
+    $(':reset, input[type="reset"]').click(function() {
         if (this.id === 'grape') {
             form_fields.qualities.grapes.remove($(this).attr('content'));
         } else if (this.id === 'award') {
@@ -82,5 +82,22 @@ function updateButtons() {
         }
         $(this).parent().parent().remove();
         console.log(form_fields.awards);
+    });
+
+    $(':submit, input[type="submit"]').click(function () {
+        form_fields.name = $('#name').val();
+        form_fields.type = $('#type_select :selected').text();
+        form_fields.qualities.year = $('#year').val();
+        form_fields.rating.min = $('#rating').val();
+        form_fields.rating.max = $('#rating_max').val();
+        form_fields.geography.country = $('#country').val();
+        form_fields.geography.region = $('#region').val();
+        form_fields.geography.vineyard = $('#vineyard').val();
+        form_fields.purchase.price = $('#price').val();
+        form_fields.purchase.date = $('#buy_date').val();
+        form_fields.purchase.location = $('#buy_location').val();
+        form_fields.targets.drinkby = $('#drink_by').val();
+        form_fields.targets.drinkfor = $('#drink_for').val();
+        console.log(form_fields);
     });
 }
