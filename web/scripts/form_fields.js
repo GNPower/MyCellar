@@ -98,6 +98,9 @@ function updateButtons() {
         form_fields.purchase.location = $('#buy_location').val();
         form_fields.targets.drinkby = $('#drink_by').val();
         form_fields.targets.drinkfor = $('#drink_for').val();
-        console.log(form_fields);
+
+        eel.search_db("$$Dummy_Val")(function (return_val) {
+            console.log(return_val);
+        });
     });
 }
