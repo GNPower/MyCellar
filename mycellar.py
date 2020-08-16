@@ -1,3 +1,4 @@
+import sys
 import sqlite3
 import eel
 
@@ -7,6 +8,23 @@ eel.init('web')
 def search_db(dummy_param):
     print("Searching DB with value (" + str(dummy_param) + " ) ...")
     return "this is my result"
+
+
+def init_db():
+    conn = sqlite3.connect('data/cellar.db')
+    c = conn.cursor()
+
+    c.execute(""" --begin-sql
+        CREATE TABLE IF NOT EXISTS red_wine (
+
+        );
+    """)
+
+    c.execute(""" --begin-sql
+        CREATE TABLE IF NOT EXISTS WHITE_wINE (
+
+        );
+    """)
 
 
 def test_db():
@@ -62,4 +80,13 @@ def test_db():
     #Close the connection
     conn.close()
 
-eel.start('home.html', size=(1000,600))
+def on_close(page, sockets):
+    print(page, 'closed')
+    print('Still have sockets open to', sockets)
+
+def run():
+    eel.start('home.html', size=(1000,600), close_callback=(lambda page, sockets: sys.exit()))
+
+
+if __name__ == '__main__':
+    run()
